@@ -9,7 +9,7 @@ session_start();
 	
 // Add values to the session.$_SESSION['cityz']
 
-$api = 'f73523d65dcec09a3ace0746a00d1b83';
+$api = '';
 $latitude = $_SESSION['latz'];
 $longitude = $_SESSION['lonz'];
 $api_url = 'https://api.openweathermap.org/data/2.5/weather?lat='.$latitude.'&lon='.$longitude.'&appid='.$api;
