@@ -1,0 +1,21 @@
+// go to this website and make an account and get an api key from there
+
+/* API syntax https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}*/
+
+// then use the code below https://openweathermap.org/current
+
+<?php
+session_start();
+	
+// Add values to the session.$_SESSION['cityz']
+
+$api = 'f73523d65dcec09a3ace0746a00d1b83';
+$latitude = $_SESSION['latz'];
+$longitude = $_SESSION['lonz'];
+$api_url = 'https://api.openweathermap.org/data/2.5/weather?lat='.$latitude.'&lon='.$longitude.'&appid='.$api;
+
+$weather_data = json_decode(file_get_contents($api_url),true);
+print_r($weather_data);
+
+
+?>
